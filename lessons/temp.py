@@ -1,3 +1,4 @@
 import numpy
+a = True
 
-print(5)
+print(not a)
