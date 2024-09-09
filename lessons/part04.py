@@ -50,6 +50,7 @@ def show_matrix(mat):
     for i in mat:
         print(i)
 
+
 if __name__ == "__main__":
     show_matrix(random_mat(3,4))
     print("")
