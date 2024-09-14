@@ -16,14 +16,44 @@
 #     print(green.name)
 #     print(Temp.name)
 
-class Myclass:
-    pass
+# class Myclass:
+#     pass
+#
+# def hello():
+#     print("hello word!")
+#
+#
+# if __name__ == "__main__":
+#     A = Myclass()
+#     A.say = hello
+#     A.say()
 
-def hello():
-    print("hello word!")
+class BoxSize:
+    def __init__(self, w, h, d):
+        self.w = w
+        self.h = h
+        self.d = d
+
+    def calculate_volume(self):
+        return self.w*self.h*self.d
+
+
+class BoxParams:
+    def __init__(self, weight, color):
+        self.weight = weight
+        self.color = color
+
+
+class Box(BoxSize, BoxParams):
+    def __init__(self, w, h, d, weight, color):
+        BoxSize.__init__(self, w, h, d)
+        BoxParams.__init__(self, weight, color)
+
+    def show(self):
+        print(self.calculate_volume())
+        print(self.weight, self.color)
 
 
 if __name__ == "__main__":
-    A = Myclass()
-    A.say = hello
-    A.say()
+    box = Box(10, 1, 23, 5, "red")
+    box.show()
