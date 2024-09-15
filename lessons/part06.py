@@ -49,11 +49,11 @@ class Box(BoxSize, BoxParams):
         BoxSize.__init__(self, w, h, d)
         BoxParams.__init__(self, weight, color)
 
-    def show(self):
-        print(self.calculate_volume())
-        print(self.weight, self.color)
+    def __str__(self):
+        return str(self.calculate_volume()) + "\n" + str(self.weight) + " " + str(self.color)
+
 
 
 if __name__ == "__main__":
     box = Box(10, 1, 23, 5, "red")
-    box.show()
+    print(box)
