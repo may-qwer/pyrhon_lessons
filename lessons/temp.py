@@ -1,3 +1,3 @@
-print("qwer\\\\")
+print("end")
 
 
